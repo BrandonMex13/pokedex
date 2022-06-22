@@ -9,7 +9,7 @@ import {MenuItem, PrimeNGConfig} from 'primeng/api';
 })
 export class HomeComponent implements OnInit {
 
-    visibleSidebar1 = false;
+    visibleSidebar1!: boolean;
 
     items: MenuItem[] = [];
 

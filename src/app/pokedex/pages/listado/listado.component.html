@@ -1,1 +1,19 @@
-<p>listado works!</p>
+<!-- <p>listado works!</p> -->
+
+<div class="row" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
+
+    <div class="col-2" fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let pokemon of pokemonList">
+
+        <p-card>
+            <ng-template pTemplate="header">
+                {{pokemon.name | titlecase}}
+            </ng-template>
+        </p-card>
+
+    </div>
+
+</div>
+
+
+
+<pre>{{ pokemonList | json }}</pre>

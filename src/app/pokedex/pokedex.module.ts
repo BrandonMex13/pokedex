@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PokemonTarjetaComponent } from './components/pokemon-tarjeta/pokemon-tarjeta.component';
 import { PrimeNGModule } from '../primeNG/prime-ng.module';
 import { PokedexRoutingModule } from './pokedex-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -17,7 +18,7 @@ import { PokedexRoutingModule } from './pokedex-routing.module';
   imports: [
     CommonModule,
     PokedexRoutingModule,
-    PrimeNGModule
+    PrimeNGModule,
   ]
 })
 export class PokedexModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokedexService } from '../../services/pokedex.service';
 
 @Component({
   selector: 'app-listado',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor() { }
+    pokemonList : any[] = [];
 
-  ngOnInit(): void {
-  }
+    constructor(
+        private pokedexInteractor : PokedexService
+    ) { }
+
+    ngOnInit(): void {
+        this.getPokemonList();
+    }
+
+    getPokemonList(){
+        this.pokedexInteractor.getPokemonList()
+        .subscribe(res => {
+                console.log(res.results); 
+                this.pokemonList = res.results;
+            }
+        );
+    }
 
 }
