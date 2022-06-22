@@ -19,6 +19,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     PokedexRoutingModule,
     PrimeNGModule,
+    FlexLayoutModule
   ]
 })
 export class PokedexModule { }
