@@ -6,6 +6,7 @@ import { PokemonTarjetaComponent } from './components/pokemon-tarjeta/pokemon-ta
 import { PrimeNGModule } from '../primeNG/prime-ng.module';
 import { PokedexRoutingModule } from './pokedex-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PokemonComponent } from './pages/pokemon/pokemon.component';
 
 
 
@@ -13,7 +14,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   declarations: [
     ListadoComponent,
     HomeComponent,
-    PokemonTarjetaComponent
+    PokemonTarjetaComponent,
+    PokemonComponent
   ],
   imports: [
     CommonModule,

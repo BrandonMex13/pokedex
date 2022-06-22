@@ -18,4 +18,8 @@ export class PokedexService {
         // ?limit=150
         return this.http.get<any>(`${this.urlApi}/pokemon`);
     }
+
+    getPokemonByURL( url : string ): Observable<any>{
+        return this.http.get<any>(`${url}`);
+    }
 }

@@ -4,11 +4,13 @@
 
     <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let pokemon of pokemonList">
 
-        <p-card>
+        <app-pokemon-tarjeta [pokemonData]="pokemon" ></app-pokemon-tarjeta>
+
+        <!-- <p-card header="{{pokemon.name | titlecase}}" subheader="tesxt">
             <ng-template pTemplate="header">
-                {{pokemon.name | titlecase}}
+                
             </ng-template>
-        </p-card>
+        </p-card> -->
 
     </div>
 

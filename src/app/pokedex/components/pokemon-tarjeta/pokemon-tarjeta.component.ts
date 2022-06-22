@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pokedex } from '../../interfaces/pokedex';
+import { PokedexService } from '../../services/pokedex.service';
 
 @Component({
   selector: 'app-pokemon-tarjeta',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonTarjetaComponent implements OnInit {
 
-  constructor() { }
+    pokemonList : any[] = [];
+    @Input('pokemonData') pokemon : any;
 
-  ngOnInit(): void {
-  }
+    pokedex !: Pokedex;
 
+    constructor(
+        private pokedexInteractor : PokedexService
+    ) { }
+
+    ngOnInit(): void {
+        this.getPokemonByURL();
+    }
+
+    getPokemonByURL(){
+        this.pokedexInteractor.getPokemonByURL( this.pokemon.url ).subscribe(
+            res => { console.log(res); this.pokedex = res;}
+        );
+    }
 }
