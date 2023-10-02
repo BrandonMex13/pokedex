@@ -6,6 +6,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { CardModule } from 'primeng/card';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
     exports: [
@@ -15,7 +16,8 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
         SidebarModule,
         CardModule,
         AvatarModule,
-        AvatarGroupModule
+        AvatarGroupModule,
+        PaginatorModule
     ]
 })
 export class PrimengModule { }

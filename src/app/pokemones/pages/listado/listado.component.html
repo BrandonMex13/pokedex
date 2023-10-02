@@ -1,22 +1,22 @@
+<div class="cardpokemon" >
 
-<!-- <div > -->
+    <p-card header="{{item.name | titlecase}}" subheader="Card Subheader" *ngFor="let item of pokemonesListado">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="{{obtenerImagen( item.url )}}" />
+        </ng-template>
 
-    <div class="cardpokemon" >
+        <ng-template pTemplate="body">
 
-        <p-card header="{{item.name | titlecase}}" subheader="Card Subheader" *ngFor="let item of pokemonesListado">
-            <ng-template pTemplate="header">
-                <img alt="Card" src="{{obtenerImagen( item.url )}}" />
-            </ng-template>
+            <p-button label="Info" styleClass="p-button-rounded p-button-info"></p-button>
+        </ng-template>
+        
+    </p-card>
 
-            <ng-template pTemplate="body">
+</div>
 
-                <p-button label="Info" styleClass="p-button-rounded p-button-info"></p-button>
-            </ng-template>
-            
-        </p-card>
-    
-    </div>
+<div>
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="totalPokemones" ></p-paginator>
+</div>
 
-<!-- </div> -->
 
 
