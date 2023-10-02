@@ -16,8 +16,8 @@ export class PokemonesService {
         private http : HttpClient
     ) { }
 
-    obtenerPokemones() : Observable<any>{
-        return this.http.get<any>(`${this.urlpokeapi}/pokemon?limit=50&offset=0`);
+    obtenerPokemones(limite: number, desde : number) : Observable<any>{
+        return this.http.get<any>(`${this.urlpokeapi}/pokemon?limit=${limite}&offset=${desde}`);
     }
 
     obtenerImagen( id : number ) : Observable<any>{
