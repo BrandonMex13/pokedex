@@ -1,0 +1,22 @@
+
+<!-- <div > -->
+
+    <div class="cardpokemon" >
+
+        <p-card header="{{item.name | titlecase}}" subheader="Card Subheader" *ngFor="let item of pokemonesListado">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="{{obtenerImagen( item.url )}}" />
+            </ng-template>
+
+            <ng-template pTemplate="body">
+
+                <p-button label="Info" styleClass="p-button-rounded p-button-info"></p-button>
+            </ng-template>
+            
+        </p-card>
+    
+    </div>
+
+<!-- </div> -->
+
+
