@@ -1,0 +1,9 @@
+html, body{
+    margin: 10px;
+    font-family: var(--font-family);
+    background-color: var(--surface-b);
+}
+
+h1, p{
+    color: white;
+}
