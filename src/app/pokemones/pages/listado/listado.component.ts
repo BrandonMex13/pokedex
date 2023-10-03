@@ -29,6 +29,8 @@ export class ListadoComponent {
 
     limite : number = 10;
 
+    cargandoListado : boolean = false;
+
     constructor(
         private pokedexService : PokemonesService
     ){}
@@ -44,16 +46,20 @@ export class ListadoComponent {
         this.obtenerPokemones( this.limite, this.first);
     }
 
-    // prueba(event : Event){
-    //     console.log('event :>> ', event);
-    // }
-
     obtenerPokemones(limite: number, desde: number){
-        this.pokemonesListado = [];
-        this.pokedexService.obtenerPokemones(limite, desde).subscribe( res => {
-            this.pokemonesListado = res['results'];
 
-            this.totalPokemones = res['count'];
+        this.cargandoListado = true;
+
+        this.pokedexService.obtenerPokemones(limite, desde).subscribe( res => {
+            
+            setTimeout(() => {
+                this.pokemonesListado = [];
+                this.cargandoListado = false;
+                this.pokemonesListado = res['results'];
+
+                this.totalPokemones = res['count'];
+    
+            }, 800);
         });
 
     }
