@@ -1,4 +1,5 @@
-<div class="cardpokemon" >
+
+<div class="cardpokemon" [hidden]="cargandoListado">
 
     <p-card header="{{item.name | titlecase}}" subheader="Card Subheader" *ngFor="let item of pokemonesListado">
         <ng-template pTemplate="header">
@@ -6,13 +7,14 @@
         </ng-template>
 
         <ng-template pTemplate="body">
-
-            <p-button label="Info" styleClass="p-button-rounded p-button-info"></p-button>
+            <p-button class="btnInfo" label="Ver mas..." styleClass="p-button-raised p-button-secondary"></p-button>
         </ng-template>
         
     </p-card>
 
 </div>
+
+<p-progressBar mode="indeterminate" [style]="{ height: '6px' }" [hidden]="!cargandoListado"></p-progressBar>
 
 <div>
     <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="totalPokemones" ></p-paginator>

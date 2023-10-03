@@ -1,3 +1,17 @@
 h1{
     margin-left: 10px;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    text-align: justify;
+}
+
+.cita{
+    text-align: center;
+    font-style: italic;
+}

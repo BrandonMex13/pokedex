@@ -1,12 +1,23 @@
 
 <p-sidebar [(visible)]="sidebarVisible">
 
-    <h3>Sidebar</h3>
+    <h3>Pokedex - Brandon Montoya</h3>
+    <hr>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+       Hola, este es un pequeño proyecto personal de una pokedex con el apoyo del servicio web de 
+       <strong><a href="https://pokeapi.co/" target="_blank">PokeApi.</a></strong>
     </p>
 
+    <hr>
+
+    <p class="cita">
+        “No dejamos de jugar porque envejecemos; envejecemos porque dejamos de jugar"
+        <br>
+        <br>
+        - George Bernard Shaw
+    </p>
+
+    <hr>
 
 </p-sidebar>
 
@@ -15,10 +26,14 @@
 <p-toolbar>
     <div class="p-toolbar-group-start">
         <p-button (click)="sidebarVisible = true" icon="pi pi-bars"></p-button>
-
         <h1>Pokedex</h1>
     </div>
+
     <div class="p-toolbar-group-end">
+        <!-- <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText />
+        </span> -->
     </div>
 </p-toolbar>
 

@@ -7,6 +7,9 @@ import { CardModule } from 'primeng/card';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { PaginatorModule } from 'primeng/paginator';
+import { ChipModule } from 'primeng/chip';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
     exports: [
@@ -17,7 +20,10 @@ import { PaginatorModule } from 'primeng/paginator';
         CardModule,
         AvatarModule,
         AvatarGroupModule,
-        PaginatorModule
+        PaginatorModule,
+        ChipModule,
+        ProgressBarModule,
+        InputTextModule
     ]
 })
 export class PrimengModule { }
