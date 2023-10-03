@@ -7,7 +7,7 @@
         </ng-template>
 
         <ng-template pTemplate="body">
-            <p-button class="btnInfo" label="Ver mas..." styleClass="p-button-raised p-button-secondary"></p-button>
+            <p-button class="btnInfo" label="Ver mas..." styleClass="p-button-raised p-button-secondary" [routerLink]="['/pokemones', obtenerIdPokemon(item.url)]"></p-button>
         </ng-template>
         
     </p-card>
