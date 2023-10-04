@@ -1,1 +1,66 @@
-<p>pokemon works!</p>
+<div class="container infopokemon">
+
+    <div class="infopokemon_imagenes">
+
+        <p-panel>
+            <ng-template pTemplate="header">
+                <p-button label="" styleClass="p-button-secondary" (click)="regresar()" icon="pi pi-arrow-left"></p-button>
+                <p class="ptitulo"> {{ pokemon['name'] | titlecase }}</p>
+            </ng-template>
+        
+            <div class="imagenes_pokemon">
+                <img src="{{ pokemon['sprites']['other']['official-artwork']['front_default'] }}" alt="imagenPokemon" [hidden]="checked">
+                <img src="{{ pokemon['sprites']['other']['official-artwork']['front_shiny'] }}" alt="imagenPokemon" [hidden]="!checked">
+            </div>
+
+            <ng-template pTemplate="icons">
+              <p-toggleButton [(ngModel)]="checked" onLabel="Shiny" offLabel="Normal"></p-toggleButton>
+            </ng-template>
+
+            <ng-template pTemplate="footer">
+                <div class="tipos">
+                    <div *ngFor="let pokemon of pokemon['types']">
+                        <p-tag severity="" [value]="pokemon['type']['name'] | titlecase" class="test"></p-tag>
+                    </div>
+                </div>
+            </ng-template>
+            
+        </p-panel>
+
+
+    </div>
+
+
+    <div class="infopokemon_estadisticas">
+        <p-card header="Informacion del Pokemon">
+
+            <p-fieldset legend="Informacion basica" [toggleable]="true">
+                <ul>
+                    <li>Nombre: {{ pokemon['name'] | titlecase }}</li>
+                    <li>Altura: {{ pokemon['height'] }} ft</li>
+                    <li>Peso: {{ pokemon['weight'] }} lbs</li>
+                </ul>
+            </p-fieldset>
+
+            <br>
+
+            <p-fieldset legend="Habilidades" [toggleable]="true">
+                <ul *ngFor="let pokemon of pokemon['abilities']">
+                    <li>Habilidad: {{ pokemon['ability']['name'] | titlecase }}</li>
+                </ul>
+            </p-fieldset>
+
+            <br>
+
+            <!-- <p-fieldset legend="Movimientos" [toggleable]="true">
+                <ul class="columnas_movimientos" *ngFor="let pokemon of pokemon['moves']">
+                    <li>{{ pokemon['move']['name'] | titlecase }}</li>
+                </ul>
+            </p-fieldset> -->
+            <!-- Estadisticas -->
+            <!-- Tipos -->
+
+        </p-card>
+    </div>
+
+</div>

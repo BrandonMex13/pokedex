@@ -1,7 +1,7 @@
 
 <div class="cardpokemon" [hidden]="cargandoListado">
 
-    <p-card header="{{item.name | titlecase}}" subheader="Card Subheader" *ngFor="let item of pokemonesListado">
+    <p-card header="{{item.name | titlecase}}" subheader="" *ngFor="let item of pokemonesListado">
         <ng-template pTemplate="header">
             <img alt="Card" src="{{obtenerImagen( item.url )}}" />
         </ng-template>

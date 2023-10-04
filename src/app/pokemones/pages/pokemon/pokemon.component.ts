@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { PokemonesService } from '../../services/pokemones.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -8,17 +9,31 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./pokemon.component.css']
 })
 export class PokemonComponent {
+
+    idPokemon : number = 0;
+    
+    pokemon : any;
+
+    checked: boolean = false;
     
     constructor(
         private router : ActivatedRoute,
-        private routerBack : Router
+        private routerBack : Router,
+        private pokemonService : PokemonesService
     ){}
 
     ngOnInit(): void {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
         this.router.params.subscribe( (params) => {
-            console.log('params :>> ', params);
+            this.idPokemon = params['id'];
+        });
+
+        this.obtenerPokemonPorId();
+    }
+
+    obtenerPokemonPorId(){
+        this.pokemonService.obtenerPokemonPorId( this.idPokemon ).subscribe( res => {
+            console.log('res :>> ', res);
+            this.pokemon = {...res};
         });
     }
 
