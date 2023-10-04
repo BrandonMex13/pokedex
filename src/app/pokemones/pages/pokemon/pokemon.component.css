@@ -1,13 +1,16 @@
-/* .infopokemon{
+img{
+    height: 250px;
+    width: 250px;
+}
+
+.infopokemon{
     display: grid;
-    grid-template-columns: 50% 2fr;
+    grid-template-columns: 100%;
     gap: 10px;
-    margin-top: 10px;
-} */
+    margin-top: 20px;
+}
 
-
-
-@media (min-width: 460px){
+@media (min-width: 480px){
 
     .infopokemon{
         display: grid;
