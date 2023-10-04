@@ -10,6 +10,10 @@ import { PaginatorModule } from 'primeng/paginator';
 import { ChipModule } from 'primeng/chip';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { InputTextModule } from 'primeng/inputtext';
+import { PanelModule } from 'primeng/panel';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { FieldsetModule } from 'primeng/fieldset';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
     exports: [
@@ -23,7 +27,11 @@ import { InputTextModule } from 'primeng/inputtext';
         PaginatorModule,
         ChipModule,
         ProgressBarModule,
-        InputTextModule
+        InputTextModule,
+        PanelModule,
+        ToggleButtonModule,
+        FieldsetModule,
+        TagModule
     ]
 })
 export class PrimengModule { }

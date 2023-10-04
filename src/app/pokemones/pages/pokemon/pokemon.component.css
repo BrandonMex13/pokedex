@@ -1,0 +1,59 @@
+/* .infopokemon{
+    display: grid;
+    grid-template-columns: 50% 2fr;
+    gap: 10px;
+    margin-top: 10px;
+} */
+
+
+
+@media (min-width: 460px){
+
+    .infopokemon{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    img{
+        height: 250px;
+        width: 250px;
+    }
+    
+}
+
+
+@media (min-width: 768px){
+
+    .infopokemon{
+        display: grid;
+        grid-template-columns: 50% 2fr;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    img{
+        height: 375px;
+        width: 375px;
+    }
+    
+}
+
+.ptitulo{
+    font-size: 24px;
+    font-style: bold;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.imagenes_pokemon{
+    display: flex;
+    justify-content: center;
+}
+
+.tipos{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}

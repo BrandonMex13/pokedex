@@ -23,4 +23,8 @@ export class PokemonesService {
     obtenerImagen( id : number ) : Observable<any>{
         return this.http.get<any>(`${this.urlpokeimagen}/${id}.png`);
     }
+
+    obtenerPokemonPorId( id: number ) : Observable<any>{
+        return this.http.get<any>(`${this.urlpokeapi}/pokemon/${id}`);
+    }
 }
